@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal website</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    
+    header {
+      background-color:black;
+      padding: 5px;
+      text-align: center;
+      font-size: 15px;
+      color: white;
+      width: 70%;
+      float: right;
+      
+    }
+    
+    
+    nav {
+      float: left;
+      width: 30%;
+      background: #ffd505;
+      padding: 20px;
+      height: 590px;
+      
+    }
+    nav .profile-img img{ 
+       cursor: pointer;
+      border-radius: 50%;
+      margin-left: 30%;
+    
+      
+    }
+
+
+  
+    
+    article {
+      float: left;
+      padding: 20px;
+      width: 70%;
+      background-color: #f1f1f1;
+      height: 500px;
+      
+       
+    }
+    
+  
+    section::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+  
+    footer {
+      background-color:black;
+      padding: 1px;
+      text-align: center;
+      color: white;
+      
+      
+    }
+    
+    
+    @media (max-width: 600px) {
+      nav, article , header{
+        width: 100%;
+        height: auto;
+      }
+  
+    }
+    </style>
+    </head>
+    <body>
+    
+
+    
+    <header>
+      <p>“software developer with a passion for developing innovative solutions. Proficient in multiple programming languages and experienced in full-stack web development. Demonstrated ability to collaborate effectively, meet tight deadlines, and deliver high-quality code. Committed to staying updated with emerging technologies and continuously enhancing technical skills.”
+
+      </p>
+    </header>
+    
+    <section>
+      <nav>
+       <div class="profile-img">
+        <label for="file">
+        <input id="file" type="file" onchange="uploadImg(event)"  style="display: none;  " />
+        <img id="pro-pic" src="./image/download.png" alt="" height="120px" width="120px" >
+       </label>
+       </div>
+       <div class="name-d">
+        <h2 style="text-align: center;">Aniket Mishra</h2>
+        <h4 style="text-align: center;">Software Engineer at Kreditbee</h4>
+        
+        
+       </div>
+       <div>
+        <h4>Skills</h4>
+        <ul>
+          <li>Java</li>
+          <li>React</li>
+          <li>Sql</li>
+          <li>Flutter</li>
+        </ul>
+      
+        <h4>Project </h4>
+          <ul>
+            <li>NodePad</li>
+            <li>Mr.Dragon</li>
+            <li>NewsApp</li>
+          </ul>
+        <h4>Contact</h4>
+        <ul>
+        <li>Email : aniket@gmail.com </li>
+        <li>Contact : 5694312043</li>
+        <li>Address : 63, Signal's Vihar</li>
+        </ul>
+       </div>
+  
+      </nav>
+      
+      <article>
+        <h1>Education</h1>
+        <p>Master of Computer Application</p>
+        <p>College : MANIT-Bhopal</p> 
+        
+        <hr>
+        
+        <h1>Experience</h1>
+        <p>Software Develper Engineer at HospitalSoftwareshop</p>
+        <ul>
+          <li>working in react.js </li>
+          <li>using mysql for a database</li>
+          <li>node.js using as a backend</li>
+        </ul>
+
+        <h1>Project</h1>
+        <p>Compalint System</p>
+        <ul>
+          <li>Complaint System is online plateform there user can complaint , it is all online process.</li>
+          <li>using  react.js for frontend</li>
+          <li>node.js for a backend and mysql for database</li>
+        </ul>
+      
+      <div class="logo-kredit"  style="float: right;" >
+        <a href="https://www.kreditbee.in/" target="_blank" >
+        <img   src="./image/download.png" alt="" height="40" , width="40" >
+        </a>
+      </div>
+    
+
+      </article>
+
+    </section>
+    
+    <footer>
+      <p>copyright: aniket@gmail.com</p>
+    </footer>
+
+<script>
+  var uploadImg = function(event){
+    var img =  document.getElementById("pro-pic");
+    img.src= URL.createObjectURL(event.target.files[0]);
+  };
+</script>
+
+  
+</body>
+</html>
